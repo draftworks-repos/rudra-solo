@@ -1,0 +1,116 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.loader--exiting {
+  animation: loaderSlideUp var(--dur-2) var(--ease-out) forwards;
+}
+
+.loader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.loader__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  color: var(--bone);
+  letter-spacing: -0.01em;
+  margin: 0;
+  animation: loaderTextReveal 0.5s var(--ease-out) forwards;
+}
+
+.loader__track {
+  position: relative;
+  width: 220px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.loader__line {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--acid);
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: loaderLineDraw 0.7s 0.2s var(--ease-out) forwards;
+}
+
+.loader__needle-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  transform: translateX(0);
+  animation: loaderNeedleMove 0.7s 0.2s var(--ease-out) forwards;
+  z-index: 2;
+}
+
+.loader__needle-icon {
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+}
+
+.loader__label {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bone-soft);
+  margin-top: var(--space-2);
+}
+
+/* Keyframes */
+@keyframes loaderTextReveal {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes loaderLineDraw {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes loaderNeedleMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(202px);
+  }
+}
+
+@keyframes loaderSlideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

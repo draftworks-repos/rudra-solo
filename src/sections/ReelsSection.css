@@ -1,0 +1,62 @@
+.reels-section {
+  background-color: var(--ink);
+  color: var(--bone);
+  padding: var(--section-pad) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.reels-section__nav-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.reels-section__arrows {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.reels-section__arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-pill);
+  background-color: var(--ink-2);
+  border: 1.5px solid var(--bone);
+  color: var(--bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform var(--dur-1) var(--ease-out), background-color var(--dur-1);
+}
+
+@media (hover: hover) {
+  .reels-section__arrow:hover {
+    background-color: var(--acid);
+    color: var(--ink);
+    border-color: var(--ink);
+    transform: scale(1.06);
+  }
+}
+
+.reels-section__scroller {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 12px 0 24px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.reels-section__scroller::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .reels-section__arrows {
+    display: flex;
+  }
+}

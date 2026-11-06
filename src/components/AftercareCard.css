@@ -1,0 +1,104 @@
+.aftercare-card {
+  position: relative;
+  width: clamp(220px, 24vw, 280px);
+  aspect-ratio: 9 / 16;
+  background-color: var(--ink);
+  color: var(--bone);
+  border: var(--border-ink);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 4px 0 var(--ink);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  user-select: none;
+  transition: transform var(--dur-1) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .aftercare-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* 4-segment progress bar */
+.aftercare-card__progress {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+}
+
+.aftercare-card__segment {
+  height: 3px;
+  flex: 1;
+  background-color: rgba(244, 239, 228, 0.25);
+  border-radius: var(--r-pill);
+}
+
+.aftercare-card__segment.is-filled {
+  background-color: rgba(212, 255, 58, 0.4);
+}
+
+.aftercare-card__segment.is-active {
+  background-color: var(--acid);
+}
+
+.aftercare-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+}
+
+.aftercare-card__icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-pill);
+  background-color: var(--acid);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-ink);
+}
+
+.aftercare-card__timeframe {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--bone);
+  letter-spacing: -0.01em;
+}
+
+.aftercare-card__headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  color: var(--acid);
+  line-height: 1.05;
+}
+
+.aftercare-card__tips {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.aftercare-card__tip-text {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--bone-soft);
+  max-width: 100%;
+}
+
+.aftercare-card__footer {
+  border-top: 1px solid rgba(244, 239, 228, 0.15);
+  padding-top: var(--space-2);
+}
+
+.aftercare-card__watermark {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(244, 239, 228, 0.4);
+}

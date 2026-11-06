@@ -1,0 +1,11 @@
+.styles-section {
+  background-color: var(--ink);
+  color: var(--bone);
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+
+.styles-list {
+  display: flex;
+  flex-direction: column;
+}

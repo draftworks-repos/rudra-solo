@@ -1,0 +1,60 @@
+.gallery-tile {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  border: var(--border-ink);
+  overflow: hidden;
+  background-color: var(--bone-2);
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform var(--dur-1) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .gallery-tile:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  .gallery-tile:hover .gallery-tile__chip {
+    background-color: var(--acid);
+  }
+}
+
+.gallery-tile__img-wrap {
+  width: 100%;
+  display: block;
+}
+
+/* Solid bone style chip bottom-left */
+.gallery-tile__chip {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: var(--bone);
+  color: var(--ink);
+  border: var(--border-ink);
+  border-radius: var(--r-pill);
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: background-color var(--dur-1) var(--ease-out);
+  z-index: 2;
+}
+
+.gallery-tile__style {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.gallery-tile__status {
+  font-weight: 500;
+  color: var(--ink-soft);
+  font-size: 0.6875rem;
+  border-left: 1px solid rgba(14, 14, 16, 0.2);
+  padding-left: 6px;
+}

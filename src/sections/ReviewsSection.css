@@ -1,0 +1,23 @@
+.reviews-section {
+  background-color: var(--bone-2);
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+
+.reviews-masonry {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .reviews-masonry {
+    column-count: 2;
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-masonry {
+    column-count: 1;
+  }
+}

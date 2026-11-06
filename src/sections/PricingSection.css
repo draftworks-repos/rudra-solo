@@ -1,0 +1,66 @@
+.pricing-section {
+  background-color: var(--bone);
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+
+.pricing-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.pricing-note-card {
+  background-color: var(--bone-2);
+  border: var(--border-ink);
+  border-radius: var(--r-md);
+  padding: 24px;
+  box-shadow: 4px 4px 0 var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform var(--dur-1) var(--ease-out);
+}
+
+.pricing-note-card:nth-child(2) {
+  transform: translateY(-8px);
+  background-color: var(--acid);
+}
+
+.pricing-note-card:nth-child(3) {
+  transform: translateY(4px);
+}
+
+.pricing-note-card__val {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  color: var(--ink);
+  line-height: 1;
+}
+
+.pricing-note-card__label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.pricing-note-card__desc {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .pricing-notes-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  .pricing-note-card:nth-child(2),
+  .pricing-note-card:nth-child(3) {
+    transform: none;
+  }
+}

@@ -1,0 +1,11 @@
+.google-g {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-pill);
+  background-color: var(--bone);
+  border: var(--border-ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

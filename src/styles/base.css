@@ -1,0 +1,183 @@
+/* Base reset and global typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bone);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background-color: var(--bone);
+  overflow-x: clip;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle ink grain */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.025;
+  background-image: radial-gradient(var(--ink) 1px, transparent 0);
+  background-size: 4px 4px;
+}
+
+::selection {
+  background-color: var(--acid);
+  color: var(--ink);
+}
+
+/* Accessible Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--acid);
+  color: var(--ink);
+  padding: 12px 20px;
+  border: var(--border-ink);
+  border-radius: var(--r-sm);
+  font-weight: 700;
+  z-index: 10000;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.section--dark :focus-visible {
+  outline: 3px solid var(--acid);
+  outline-offset: 2px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: var(--lh-display);
+  font-weight: 400;
+}
+
+p {
+  max-width: 60ch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Common Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* Gen Z Styling Utilities */
+.marker-swipe {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.marker-swipe::before {
+  content: "";
+  position: absolute;
+  left: -4%;
+  bottom: 6%;
+  width: 108%;
+  height: 48%;
+  background-color: var(--acid);
+  transform: rotate(-1.5deg);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.marker-swipe--hot::before {
+  background-color: var(--hot);
+}
+
+.outlined-text {
+  -webkit-text-stroke: 1.5px currentColor;
+  color: transparent !important;
+  display: inline;
+}
+
+.outlined-text--bone {
+  -webkit-text-stroke: 1.5px var(--bone);
+  color: transparent !important;
+}
+
+.outlined-text--ink {
+  -webkit-text-stroke: 1.5px var(--ink);
+  color: transparent !important;
+}
+
+.section-num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  -webkit-text-stroke: 1.5px currentColor;
+  color: transparent;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Content visibility on below-the-fold sections */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

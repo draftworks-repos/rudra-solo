@@ -1,0 +1,72 @@
+.flash-section {
+  background-color: var(--acid);
+  color: var(--ink);
+  padding: var(--section-pad) 0;
+  position: relative;
+  border-top: var(--border-ink);
+  border-bottom: var(--border-ink);
+}
+
+.flash-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bone);
+  color: var(--ink);
+  border: var(--border-ink);
+  border-radius: var(--r-pill);
+  padding: 8px 18px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+  transition: transform var(--dur-1) var(--ease-out), background-color var(--dur-1);
+}
+
+.flash-toggle-btn__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--ink);
+}
+
+.flash-toggle-btn.is-active {
+  background-color: var(--ink);
+  color: var(--bone);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.flash-toggle-btn.is-active .flash-toggle-btn__dot {
+  background-color: var(--acid);
+}
+
+/* 4 cols desktop, 3 tablet, 2 mobile */
+.flash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .flash-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .flash-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.flash-section__load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}

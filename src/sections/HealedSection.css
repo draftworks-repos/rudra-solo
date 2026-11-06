@@ -1,0 +1,121 @@
+.healed-section {
+  background-color: var(--ink);
+  color: var(--bone);
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+
+/* Desktop Bento Grid: 2 columns, height-aligned */
+.healed-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.healed-grid__featured {
+  display: flex;
+  height: 100%;
+}
+
+.healed-grid__featured .before-after {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.healed-grid__featured .before-after__frame {
+  height: 100%;
+  aspect-ratio: auto;
+  min-height: 520px;
+}
+
+.healed-grid__side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--space-5);
+  height: 100%;
+}
+
+.healed-grid__side .before-after {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.healed-grid__side .before-after__frame {
+  height: 100%;
+  aspect-ratio: auto;
+  min-height: 245px;
+}
+
+@media (max-width: 1024px) {
+  .healed-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  .healed-grid__featured .before-after__frame {
+    aspect-ratio: 16 / 11;
+    min-height: auto;
+  }
+  .healed-grid__side {
+    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .healed-grid__side .before-after__frame {
+    aspect-ratio: 4 / 5;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .healed-grid__featured .before-after__frame {
+    aspect-ratio: 4 / 5;
+  }
+}
+/* Tablet */
+@media (max-width: 1024px) {
+  .healed-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+    width: 100%;
+    min-width: 0;
+  }
+
+  .healed-grid__featured,
+  .healed-grid__side {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .healed-grid__featured .before-after,
+  .healed-grid__side .before-after {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .healed-grid__featured .before-after__frame,
+  .healed-grid__side .before-after__frame {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 11;
+  }
+
+  .healed-grid__side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .healed-grid__featured .before-after__frame,
+  .healed-grid__side .before-after__frame {
+    aspect-ratio: 4 / 5;
+  }
+}

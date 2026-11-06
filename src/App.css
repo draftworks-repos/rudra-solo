@@ -1,0 +1,6 @@
+/* App-level shell styles */
+#main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

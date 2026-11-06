@@ -1,0 +1,22 @@
+.aftercare-section {
+  background-color: var(--acid);
+  color: var(--ink);
+  padding: var(--section-pad) 0;
+  position: relative;
+  border-top: var(--border-ink);
+  border-bottom: var(--border-ink);
+}
+
+.aftercare-scroller {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 12px 4px 28px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.aftercare-scroller::-webkit-scrollbar {
+  display: none;
+}

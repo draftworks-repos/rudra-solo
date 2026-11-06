@@ -1,0 +1,60 @@
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: var(--border-ink);
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transform: rotate(var(--rot, 0deg));
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: transform var(--dur-1) var(--ease-out);
+}
+
+.sticker--sm {
+  padding: 4px 10px;
+  font-size: 0.6875rem;
+}
+
+.sticker--md {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+}
+
+.sticker--lg {
+  padding: 8px 18px;
+  font-size: 0.875rem;
+}
+
+.sticker--acid {
+  background-color: var(--acid);
+  color: var(--ink);
+}
+
+.sticker--bone {
+  background-color: var(--bone);
+  color: var(--ink);
+}
+
+.sticker--hot {
+  background-color: var(--hot);
+  color: var(--bone);
+}
+
+.sticker--dark {
+  background-color: var(--ink);
+  color: var(--bone);
+  border-color: var(--bone);
+  box-shadow: 2px 2px 0 var(--acid);
+}
+
+@media (hover: hover) {
+  .sticker:hover {
+    transform: rotate(var(--rot, 0deg)) scale(1.04);
+  }
+}

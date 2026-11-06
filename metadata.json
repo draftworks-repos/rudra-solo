@@ -1,0 +1,6 @@
+{
+  "name": "RUDRA INK — Solo Tattoo Artist Portfolio",
+  "description": "Custom fine line, black & grey, and blackwork tattoo portfolio of Rudra in India. Book your session or claim one-off flash.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,170 @@
+.before-after {
+  position: relative;
+  width: 100%;
+}
+
+.before-after__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-md);
+  border: 2px solid var(--bone);
+  overflow: hidden;
+  background-color: var(--ink-2);
+  box-shadow: 4px 4px 0 rgba(212, 255, 58, 0.25);
+  user-select: none;
+}
+
+.before-after--large .before-after__frame {
+  aspect-ratio: 16 / 11;
+}
+
+.before-after__layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.before-after__layer--fresh {
+  clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0);
+  z-index: 2;
+}
+
+.before-after__layer--healed {
+  z-index: 1;
+}
+
+.before-after__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.03) saturate(1.04);
+}
+
+/* Vertical divider line */
+.before-after__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos, 50%);
+  width: 2px;
+  background-color: var(--bone);
+  z-index: 3;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.before-after__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-pill);
+  background-color: var(--acid);
+  border: var(--border-ink);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* Top Chips */
+.before-after__top-chips {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.before-after__chip {
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  border: var(--border-ink);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.before-after__chip--fresh {
+  background-color: var(--acid);
+  color: var(--ink);
+}
+
+.before-after__chip--healed {
+  background-color: var(--bone);
+  color: var(--ink);
+}
+
+/* Bottom Caption Chip */
+.before-after__caption-chip {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background-color: var(--bone);
+  color: var(--ink);
+  border: var(--border-ink);
+  border-radius: var(--r-sm);
+  padding: 8px 14px;
+  z-index: 4;
+  box-shadow: 2px 2px 0 var(--ink);
+  pointer-events: none;
+  max-width: calc(100% - 28px);
+}
+
+.before-after__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.before-after__sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.before-after__dot {
+  color: var(--acid);
+}
+
+.before-after__time {
+  color: var(--ink);
+}
+
+/* Native Range input overlaid */
+.before-after__range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 5;
+  margin: 0;
+}
+
+.before-after__range:focus-visible ~ .before-after__divider .before-after__handle {
+  outline: 3px solid var(--bone);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .before-after--large .before-after__frame {
+    aspect-ratio: 4 / 5;
+  }
+}

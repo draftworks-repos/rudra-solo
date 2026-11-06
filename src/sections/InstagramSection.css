@@ -1,0 +1,5 @@
+.instagram-section {
+  background-color: var(--bone);
+  padding: var(--section-pad) 0;
+  position: relative;
+}

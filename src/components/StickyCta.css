@@ -1,0 +1,29 @@
+.sticky-cta {
+  position: fixed;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translate(-50%, 120%);
+  z-index: 900;
+  transition: transform var(--dur-2) var(--ease-out);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.sticky-cta--visible {
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.sticky-cta__btn {
+  box-shadow: 0 8px 24px rgba(14, 14, 16, 0.35);
+  white-space: nowrap;
+}
+
+/* Hide on desktop >= 1025px */
+@media (min-width: 1025px) {
+  .sticky-cta {
+    display: none !important;
+  }
+}

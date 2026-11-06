@@ -1,0 +1,58 @@
+:root {
+  /* Colors */
+  --bone: #F4EFE4;
+  --bone-2: #E9E2D2;
+  --ink: #0E0E10;
+  --ink-2: #1A1A1D;
+  --acid: #D4FF3A;
+  --hot: #FF4D2E;
+  --ink-soft: #4B4B52;
+  --bone-soft: rgba(244, 239, 228, 0.76);
+
+  /* Typography */
+  --font-display: "Bagel Fat One", cursive, sans-serif;
+  --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-marker: "Permanent Marker", cursive;
+
+  --fs-hero: clamp(3rem, 10vw, 8.5rem);
+  --fs-h2: clamp(2.2rem, 6vw, 5rem);
+  --fs-h3: clamp(1.3rem, 2.2vw, 1.8rem);
+  --fs-body: clamp(1rem, 0.3vw + 0.95rem, 1.125rem);
+  --fs-label: 0.75rem;
+
+  --lh-display: 0.92;
+  --lh-body: 1.65;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --container-max: 1280px;
+  --section-pad: clamp(72px, 10vw, 128px);
+  --container-pad: clamp(20px, 4vw, 48px);
+
+  /* Radius */
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 28px;
+  --r-pill: 999px;
+
+  /* Neo-brutal details */
+  --border-ink: 2px solid var(--ink);
+  --border-bone: 2px solid var(--bone);
+  --shadow-hard: 4px 4px 0 var(--ink);
+  --shadow-hard-acid: 4px 4px 0 var(--acid);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 0.2s;
+  --dur-2: 0.5s;
+}
