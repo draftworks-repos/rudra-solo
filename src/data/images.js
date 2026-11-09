@@ -1,16 +1,16 @@
 export const images = {
   hero: {
-    src: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1200&q=80",
+    src: "/temp/me.webp",
     alt: "Rudra tattooing intricate fine-line needlework in his Bengaluru studio",
     position: "50% 35%",
   },
   artist01: {
-    src: "https://plus.unsplash.com/premium_photo-1677178690340-fa5bedec0c77?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    src: "/temp/me.webp",
     alt: "Portrait of tattoo artist Rudra in his studio",
     position: "50% 30%",
   },
   artist02: {
-    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80",
+    src: "/temp/me2.png",
     alt: "Rudra applying ink to client forearm with precision rotary machine",
     position: "50% 50%",
   },
@@ -23,7 +23,7 @@ export const images = {
       position: "50% 50%",
     },
     {
-      src: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
+      src: "https://images.unsplash.com/photo-1597852075234-fd721ac361d3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
       alt: "Sacred geometry sunburst flash design",
       position: "50% 50%",
     },
@@ -48,7 +48,7 @@ export const images = {
       position: "50% 50%",
     },
     {
-      src: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80https://images.unsplash.com/photo-1704345910291-49168c7631b6?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+      src: "https://images.unsplash.com/photo-1562379825-415aea84ebcf?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
       alt: "Barbed wire wreath with mini eye flash design",
       position: "50% 50%",
     },
@@ -147,36 +147,36 @@ export const images = {
   healed: [
     {
       fresh: {
-        src: "https://plus.unsplash.com/premium_photo-1661678147338-7248d49eb887?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+        src: "/temp/before-1.jpg",
         alt: "Fresh fine line botanical sprig tattoo right after session",
         position: "50% 50%",
       },
       healed: {
-        src: "https://images.unsplash.com/photo-1626983969036-c1ff8996c08b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+        src: "/temp/after-1.jpg",
         alt: "Healed fine line botanical tattoo after 6 months settled into skin",
         position: "50% 50%",
       },
     },
     {
       fresh: {
-        src: "https://plus.unsplash.com/premium_photo-1753960874112-d2fbea5ad41f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+        src: "/temp/before-2.jpg",
         alt: "Fresh black and grey lion portrait on forearm",
         position: "50% 45%",
       },
       healed: {
-        src: "https://plus.unsplash.com/premium_photo-1753960874530-e7ae85701763?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+        src: "/temp/after-2.jpg",
         alt: "Healed black and grey lion portrait after 6 months with smooth silver tones",
         position: "50% 45%",
       },
     },
     {
       fresh: {
-        src: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80",
+        src: "/temp/before-3.jpg",
         alt: "Fresh heavy blackwork tribal geometry on calf",
         position: "50% 50%",
       },
       healed: {
-        src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80",
+        src: "/temp/after-3.jpg",
         alt: "Healed rich matte blackwork after 6 months",
         position: "50% 50%",
       },

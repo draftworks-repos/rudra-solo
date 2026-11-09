@@ -20,22 +20,27 @@ export default function HeroSection() {
           <Reveal delay={0}>
             <div className="hero-section__eyebrow">
               <span className="hero-section__pulse-dot" />
-              <span className="hero-section__eyebrow-text">Books open for custom projects</span>
+              <span className="hero-section__eyebrow-text">
+                Books open for custom projects
+              </span>
             </div>
           </Reveal>
 
           <Reveal delay={80}>
             <h1 className="hero-section__title">
-              WEAR YOUR <br />
-              <span className="marker-swipe hero-section__wild">WILD</span> IDEAS.
+              WEAR
+              <br />
+              <span className="marker-swipe hero-section__wild">WILD</span>{" "}
+              IDEAS.
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="hero-section__desc">
-              Custom single-needle fine line, dark blackwork, and smooth greywash
-              crafted by one artist. One chair, sterile setup, zero mass templates.
-              Built to age gracefully on your skin for sixty years.
+              Custom single-needle fine line, dark blackwork, and smooth
+              greywash crafted by one artist. One chair, sterile setup, zero
+              mass templates. Built to age gracefully on your skin for sixty
+              years.
             </p>
           </Reveal>
 
@@ -50,11 +55,7 @@ export default function HeroSection() {
                 <ArrowUpRight size={20} />
               </CtaButton>
 
-              <CtaButton
-                variant="secondary"
-                size="lg"
-                href="#reels"
-              >
+              <CtaButton variant="secondary" size="lg" href="#reels">
                 <Play size={18} fill="currentColor" />
                 <span>Watch reels</span>
               </CtaButton>
